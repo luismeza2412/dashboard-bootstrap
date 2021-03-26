@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS -->
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!--Scripts-->
+    <script src="js/scripts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js" integrity="sha256-t9UJPrESBeG2ojKTIcFLPGF7nHi2vEc7f5A2KpH/UBU=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+
+
+    <title>Dashboard DigitalWare</title>
+</head>
+<!-- Content -->
+
+<body>
+    <div class="d-flex">
+        <div id="sidebar-container" class="bg-primary">
+            <div class="logotype">
+                <h4 class="text-light text-center fw-bold">DigitalWare</h4>
+            </div>
+            <div class="menu">
+                <a href="" class="d-block p-3 text-light"><i class="icon ion-md-menu me-2 lead"></i> Inicio</a>
+                <a href="" class="d-block p-3 text-light"><i class="icon ion-md-stats me-2 lead"></i> Estadísticas</a>
+                <a href="" class="d-block p-3 text-light"><i class="icon ion-md-person me-2 lead"></i> Mi Perfil</a>
+                <a href="" class="d-block p-3 text-light"><i class="icon ion-md-settings me-2 lead"></i>
+                    Configuración</a>
+            </div>
+        </div>
+        <div class="w-100">
+            <nav class="navbar shadow-sm navbar-expand-lg navbar-light bg-light ">
+
+                <div class="container-fluid">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <form class="d-flex position-relative my-2 d-inline-block">
+                        <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+                        <button class="btn position-absolute icon-btn" type="submit"><i class="icon ion-md-search"></i>
+                        </button>
+                    </form>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <img class="img-fluid rounded-circle me-2 photo-profile" src="img/perfil.jpg" alt=""> Luis Ernesto Meza
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item" href="#">Cargo</a></li>
+                                    <li><a class="dropdown-item" href="#">Mi perfil</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">Cerrar Sesión</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <div id="content">
+                <section class="py-3">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-9">
+                                <h1 class="fw-bold mb-0">Bienvenido, Luis</h1>
+                                <h6 class="text-muted lead">A continuación se muestra toda la información</h6>
+                            </div>
+                            <div class="col-lg-3 d-flex">
+                                <button class="btn btn-primary w-100 align-self-center">Descargar informe</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="bg-colors">
+                    <div class="container">
+                        <div class="card shadow-sm rounded-0">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-lg-3 col-md-6 d-flex separator my-3">
+                                        <div class="mx-auto">
+                                            <h6 class="text-muted">Ingresos Mensuales</h6>
+                                            <h3 class="fw-bold">2.000.000</h3>
+                                            <h6 class="text-success"><i class="icon ion-md-arrow-dropup-circle"></i> 20.00%
+                                            </h6>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-6 d-flex separator my-3">
+                                        <div class="mx-auto">
+                                            <h6 class="text-muted">Ingresos Semanales</h6>
+                                            <h3 class="fw-bold">500.000</h3>
+                                            <h6 class="text-success"><i class="icon ion-md-arrow-dropup-circle"></i> 50.00%
+                                            </h6>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-6 d-flex separator my-3">
+                                        <div class="mx-auto">
+                                            <h6 class="text-muted">Ingresos Diarios</h6>
+                                            <h3 class="fw-bold">10.000</h3>
+                                            <h6 class="text-success"><i class="icon ion-md-arrow-dropup-circle"></i> 10.00%
+                                            </h6>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-6 d-flex my-3">
+                                        <div class="mx-auto">
+                                            <h6 class="text-muted">Ingresos Semestrales</h6>
+                                            <h3 class="fw-bold">12.000.000</h3>
+                                            <h6 class="text-success"><i class="icon ion-md-arrow-dropup-circle"></i> 50.00%
+                                            </h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="bg-grey">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-8 my-3">
+                                <div class="card shadow-sm rounded-0">
+                                    <div class="card-header bg-light">
+                                        <h6 class="fw-bold mb-0">Nuestros Clientes</h6>
+                                    </div>
+                                    <div class="card-body">
+                                        <canvas id="barChart"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 my-3">
+                                <div class="card shadow-sm rounded-0">
+                                    <div class="card-header bg-light">
+                                        <h6 class="fw-bold bg-light">Servicios en descuento</h6>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="d-flex border-bottom py-2">
+                                            <div class="d-flex me-3">
+                                                <h2 class="mb-0 align-self-center"><i class="icon ion-md-pricetags"></i>
+                                                </h2>
+                                            </div>
+                                            <div class="align-self-center">
+                                                <h6 class="d-inline-block">$600.000</h6><span class="badge bg-success ms-2">15% de descuento</span>
+                                                <small class="d-block text-muted">Aplicación móvil híbrida</small>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex border-bottom py-2">
+                                            <div class="d-flex me-3">
+                                                <h2 class="mb-0 align-self-center"><i class="icon ion-md-pricetags"></i>
+                                                </h2>
+                                            </div>
+                                            <div class="align-self-center">
+                                                <h6 class="d-inline-block">$8.000.000</h6><span class="badge bg-success ms-2">10% de descuento</span>
+                                                <small class="d-block text-muted">Desarrollo microservicios</small>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex border-bottom py-2">
+                                            <div class="d-flex me-3">
+                                                <h2 class="mb-0 align-self-center"><i class="icon ion-md-pricetags"></i>
+                                                </h2>
+                                            </div>
+                                            <div class="align-self-center">
+                                                <h6 class="d-inline-block">$900.000</h6><span class="badge bg-success ms-2">25% de descuento</span>
+                                                <small class="d-block text-muted">Aplicación móvil Android</small>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex border-bottom py-2">
+                                            <div class="d-flex me-3">
+                                                <h2 class="mb-0 align-self-center"><i class="icon ion-md-pricetags"></i>
+                                                </h2>
+                                            </div>
+                                            <div class="align-self-center">
+                                                <h6 class="d-inline-block">$7.000.000</h6><span class="badge bg-success ms-2">15% de descuento</span>
+                                                <small class="d-block text-muted">Dashboard personalizado</small>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex border-bottom py-2 mb-3">
+                                            <div class="d-flex me-3">
+                                                <h2 class="mb-0 align-self-center"><i class="icon ion-md-pricetags"></i>
+                                                </h2>
+                                            </div>
+                                            <div class="align-self-center">
+                                                <h6 class="d-inline-block">$600.000</h6><span class="badge bg-success ms-2">50% de descuento</span>
+                                                <small class="d-block text-muted">Aplicación móvil iOs</small>
+                                            </div>
+                                        </div>
+                                        <button class="btn btn-primary w-100">Ver Todo</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var ctx = document.getElementById('barChart').getContext('2d');
+        var chart = new Chart(ctx, {
+
+            type: 'bar',
+
+            data: {
+                labels: ['DIAN', 'Contraloria', 'Icetex', 'MinTIC'],
+                datasets: [{
+                    label: 'Nuevos usarios en el sistema',
+                    backgroundColor: ['#F8BD1F', '#F8BD1F', '#F8BD1F', '#091735'],
+                    borderColor: '#12c9e5',
+                    data: [50, 100, 150, 200],
+                    maxBarThickness: 40
+                }]
+            },
+            options: {
+                animation: {
+                    animateScale: true
+                }
+            }
+        });
+    </script>
+
+</body>
+
+</html>
